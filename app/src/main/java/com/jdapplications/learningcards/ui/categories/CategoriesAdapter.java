@@ -26,9 +26,9 @@ import butterknife.ButterKnife;
  * @author daniel.hartwich
  */
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoryViewHolder> {
-    private List<Category> categories;
     private final LayoutInflater inflater;
     private final Context activity;
+    private List<Category> categories;
 
     @Inject
     public CategoriesAdapter(@ActivityContext Context activity) {

@@ -10,15 +10,14 @@ import rx.Subscription;
 /**
  * @author daniel.hartwich
  */
-public class AnswersPresenter extends BasePresenter<AnswersMvpView>{
-    private Subscription subscription;
+public class AnswersPresenter extends BasePresenter<AnswersMvpView> {
     private final LearningCardService learningCardService;
+    private Subscription subscription;
 
     @Inject
     public AnswersPresenter(LearningCardService learningCardService) {
         this.learningCardService = learningCardService;
     }
-
 
     @Override
     public void attachView(AnswersMvpView mvpView) {

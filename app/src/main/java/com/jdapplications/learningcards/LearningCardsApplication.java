@@ -15,6 +15,10 @@ import timber.log.Timber;
 public class LearningCardsApplication extends Application {
     ApplicationComponent applicationComponent;
 
+    public static LearningCardsApplication get(Context context) {
+        return (LearningCardsApplication) context.getApplicationContext();
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -22,10 +26,6 @@ public class LearningCardsApplication extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
-    }
-
-    public static LearningCardsApplication get(Context context) {
-        return (LearningCardsApplication) context.getApplicationContext();
     }
 
     public ApplicationComponent getComponent() {

@@ -13,8 +13,8 @@ import rx.schedulers.Schedulers;
  * @author daniel.hartwich
  */
 public class CategoryQuestionsPresenter extends BasePresenter<CategoryQuestionsMvpView> {
-    private Subscription subscription;
     private final LearningCardService learningCardService;
+    private Subscription subscription;
 
     @Inject
     public CategoryQuestionsPresenter(LearningCardService learningCardService) {

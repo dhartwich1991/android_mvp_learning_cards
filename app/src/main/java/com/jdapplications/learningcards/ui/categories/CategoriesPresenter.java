@@ -15,8 +15,8 @@ import rx.schedulers.Schedulers;
  * @author daniel.hartwich
  */
 public class CategoriesPresenter extends BasePresenter<CategoriesMvpView> {
-    private Subscription subscription;
     private final LearningCardService learningCardService;
+    private Subscription subscription;
 
     @Inject
     public CategoriesPresenter(LearningCardService learningCardService) {

@@ -9,6 +9,17 @@ import com.squareup.moshi.Json;
  * @author daniel.hartwich
  */
 public class Answer implements Parcelable {
+    public static final Creator<Answer> CREATOR = new Creator<Answer>() {
+        @Override
+        public Answer createFromParcel(Parcel source) {
+            return new Answer(source);
+        }
+
+        @Override
+        public Answer[] newArray(int size) {
+            return new Answer[size];
+        }
+    };
     @Json(name = "id")
     private Integer id;
     @Json(name = "answer")
@@ -21,6 +32,18 @@ public class Answer implements Parcelable {
     private String createdAt;
     @Json(name = "updated_at")
     private String updatedAt;
+
+    public Answer() {
+    }
+
+    private Answer(Parcel in) {
+        this.id = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.answer = in.readString();
+        this.questionId = in.readString();
+        this.correct = (Boolean) in.readValue(Boolean.class.getClassLoader());
+        this.createdAt = in.readString();
+        this.updatedAt = in.readString();
+    }
 
     /**
      * @return The id
@@ -130,28 +153,4 @@ public class Answer implements Parcelable {
         dest.writeString(this.createdAt);
         dest.writeString(this.updatedAt);
     }
-
-    public Answer() {
-    }
-
-    private Answer(Parcel in) {
-        this.id = (Integer) in.readValue(Integer.class.getClassLoader());
-        this.answer = in.readString();
-        this.questionId = in.readString();
-        this.correct = (Boolean) in.readValue(Boolean.class.getClassLoader());
-        this.createdAt = in.readString();
-        this.updatedAt = in.readString();
-    }
-
-    public static final Creator<Answer> CREATOR = new Creator<Answer>() {
-        @Override
-        public Answer createFromParcel(Parcel source) {
-            return new Answer(source);
-        }
-
-        @Override
-        public Answer[] newArray(int size) {
-            return new Answer[size];
-        }
-    };
 }

@@ -26,9 +26,9 @@ import butterknife.ButterKnife;
  * @author daniel.hartwich
  */
 public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswerViewHolder> {
-    private List<Answer> answers;
     private final LayoutInflater inflater;
     private final Context activity;
+    private List<Answer> answers;
 
     @Inject
     public AnswersAdapter(@ActivityContext Context activity) {
@@ -57,7 +57,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswerVi
               .setOnClickListener(v -> {
                   Toast.makeText(activity, "Pressed at " + position + " Answer was correct: "
                         + answer.getCorrect(), Toast.LENGTH_SHORT).show();
-                  if(answer.getCorrect()) {
+                  if (answer.getCorrect()) {
                       v.setBackgroundColor(activity.getResources().getColor(color.holo_green_light));
                   } else {
                       v.setBackgroundColor(activity.getResources().getColor(color.holo_red_light));

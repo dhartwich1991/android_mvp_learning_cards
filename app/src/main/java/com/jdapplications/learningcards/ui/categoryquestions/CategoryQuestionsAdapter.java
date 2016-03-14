@@ -27,9 +27,9 @@ import butterknife.ButterKnife;
  * @author daniel.hartwich
  */
 public class CategoryQuestionsAdapter extends RecyclerView.Adapter<CategoryQuestionsViewHolder> {
-    private List<CategoryQuestionsResponse> categoryQuestionsResponses;
     private final LayoutInflater inflater;
     private final Context activity;
+    private List<CategoryQuestionsResponse> categoryQuestionsResponses;
 
     @Inject
     public CategoryQuestionsAdapter(@ActivityContext Context activity) {

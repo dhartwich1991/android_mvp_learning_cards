@@ -51,16 +51,16 @@ public class Question {
     /**
      * @return The noAnsewered
      */
-//    public Object getNoAnsewered() {
-//        return noAnsewered;
-//    }
-//
-//    /**
-//     * @param noAnsewered The no_ansewered
-//     */
-//    public void setNoAnsewered(int noAnsewered) {
-//        this.noAnsewered = noAnsewered;
-//    }
+    //    public Object getNoAnsewered() {
+    //        return noAnsewered;
+    //    }
+    //
+    //    /**
+    //     * @param noAnsewered The no_ansewered
+    //     */
+    //    public void setNoAnsewered(int noAnsewered) {
+    //        this.noAnsewered = noAnsewered;
+    //    }
 
     /**
      * @return The imageUrl
@@ -93,16 +93,16 @@ public class Question {
     /**
      * @return The typeId
      */
-//    public Object getTypeId() {
-//        return typeId;
-//    }
-//
-//    /**
-//     * @param typeId The type_id
-//     */
-//    public void setTypeId(int typeId) {
-//        this.typeId = typeId;
-//    }
+    //    public Object getTypeId() {
+    //        return typeId;
+    //    }
+    //
+    //    /**
+    //     * @param typeId The type_id
+    //     */
+    //    public void setTypeId(int typeId) {
+    //        this.typeId = typeId;
+    //    }
 
     /**
      * @return The createdAt

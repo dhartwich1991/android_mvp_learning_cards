@@ -34,6 +34,7 @@ public class BasePresenter<T extends MvpView> implements Presenter<T> {
 
     public static class MvpViewNotAttachedException extends RuntimeException {
         private static final long serialVersionUID = 8937083835263109712L;
+
         public MvpViewNotAttachedException() {
             super("Please call Presenter.attachView(MvpView) before requesting data to the Presenter.");
         }
